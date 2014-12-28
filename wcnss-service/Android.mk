@@ -1,3 +1,5 @@
+ifeq ($(call my-dir),$(call project-path-for,wlan))
+
 ifneq (,$(filter arm aarch64 arm64, $(TARGET_ARCH)))
 
 LOCAL_PATH := $(call my-dir)
@@ -70,3 +72,5 @@ endif #TARGET_USES_QCOM_WCNSS_QMI
 endif #TARGET_PROVIDES_WCNSS_QMI
 
 endif #TARGET_ARCH == arm
+
+endif
